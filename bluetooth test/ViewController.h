@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CBPeripheralManagerDelegate>
 
+@property CBPeripheralManager *myPeripheralManager;
+@property CBUUID *testServiceUUID;
+@property CBMutableCharacteristic *testCharacteristics;
+@property CBMutableService *testService;
+- (IBAction)click:(id)sender;
 
 @end
 
